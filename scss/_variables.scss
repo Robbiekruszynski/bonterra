@@ -1,0 +1,109 @@
+/* main: master.scss */
+
+/*************************************
+Font Variables
+**************************************/
+
+$font_body: 'museo-sans', sans-serif;
+$font_headline: 'EB Garamond', serif;
+$font_color: #fff;
+
+/*************************************
+Breakpoints
+**************************************/
+// $row-max-width: 1280px;
+$xxlarge: 1921px;
+$xlarge: 1441px;
+$large: 1026px;
+$medium: 769px;
+$small: 426px;
+
+
+/*************************************
+Media Queries
+**************************************/
+@mixin media($args...) {
+  $media-type: 'only screen';
+  $media-type-key: 'media-type';
+  $args: keywords($args);
+  $expr: '';
+
+  @if map-has-key($args, $media-type-key) {
+    $media-type: map-get($args, $media-type-key);
+    $args: map-remove($args, $media-type-key);
+  }
+
+  @each $key, $value in $args {
+    @if $value {
+      $expr: "#{$expr} and (#{$key}: #{$value})";
+    }
+  }
+
+  @media #{$media-type} #{$expr} {
+    @content;
+  }
+}
+
+@mixin media-max($max){
+  @include media($max-width: ($max - 1)) {
+    @content;
+  }
+}
+
+@mixin media-min($min){
+  @include media($min-width: $min) {
+    @content;
+  }
+}
+
+
+/*************************************
+Font Size
+**************************************/
+@function rem($px,$rembase:16){
+	@return ($px/$rembase)+rem;
+}
+@function convert($value, $currentUnit, $convertUnit:rems, $base:16){
+	  @if $currentUnit == px{
+
+	    @if $convertUnit == rems{
+	      @return $value / 16 + 0rem;
+	    }
+	    @else if $convertUnit == percent{
+	      @return percentage($value / 16);
+	    }
+
+
+	  }@else if $currentUnit == rems{
+
+	    @if $convertUnit == px{
+	      @return $value * 16 + 0px;
+	    }
+	    @else if $convertUnit == percent{
+	      @return percentage($value);
+	    }
+
+	  }@else if $currentUnit == percent{
+
+	    @if $convertUnit == px{
+	      @return $value * 16 / 100 + 0px;
+	    }
+	    @else if $convertUnit == rems{
+	      @return $value / 100 + 0rem;
+	    }
+
+	  }@else if $currentUnit == pts{
+
+	    @if $convertUnit == px{
+				$px: $value / 1.3333 + 0;
+
+	      @return $px / $base + 0rem;
+	    }
+	    @else if $convertUnit == rems{
+	      @return $value / 12 + 0rem;
+	    }
+	    @else if $convertUnit == percent{
+	      @return percentage($value / 12)
+	    }
+	  }
+	}

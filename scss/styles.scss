@@ -1,0 +1,118 @@
+/* main: master.scss */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url("../assets/img/background-image-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  @media screen and (min-width: 769px){
+    background-image: url("../assets/img/background-image.png");
+  }
+}
+
+.background{
+  border: 1px solid red;
+  width: 100vw;
+  height: 100vh;
+  // background-image: url("../assets/img/background-image-mobile.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // overflow: hidden;
+  // background-position: center;
+  // @media screen and (min-width: 769px){
+  //   background-image: url("../assets/img/background-image.png");
+  // }
+}
+
+.content-container{
+  border: 1px solid green;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  @media screen and (min-width: 769px){
+    width: 40vw;
+    margin-left: rem(100);
+  }
+}
+
+.content-container-nested{
+  border: 3px dotted salmon;
+width: 100%;
+  height: rem(750);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: scroll;
+  @media screen and (min-width: 769px){
+    height: rem(650);
+    margin-top: rem(50);
+  }
+}
+
+.nested-logo-text{
+  border: 3px dashed lightblue;
+  width: 100%;
+  height: rem(450);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(30);
+  box-sizing: border-box;
+  @media screen and (min-width: 769px){
+    height: rem(480);
+  }
+}
+
+.content-logo{
+  border: 1px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.content-text{
+  border: 1px solid orange;
+  text-align: center;
+  width: rem(450);
+  height: rem(250);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  P{
+    line-height: 32px;
+  }
+  button{
+    width: rem(150);
+    height: rem(40);
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: rem(16);
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  @include media-min(769px) {
+    width: 100%;
+  }
+}
+
+.content-text-contact a:hover{
+    cursor: pointer;
+}

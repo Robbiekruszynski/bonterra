@@ -1,0 +1,139 @@
+/* main: master.scss */
+/*************************************
+Font Variables
+**************************************/
+/*************************************
+Breakpoints
+**************************************/
+/*************************************
+Media Queries
+**************************************/
+/*************************************
+Font Size
+**************************************/
+/* main: master.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  background-image: url("../assets/img/180410_Bonterra_Location_6386_Proof.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .background {
+    background-image: url("../assets/img/180410_Bonterra_Location_6386_Proof_tablet.jpg");
+  }
+}
+
+.content-container {
+  border: 1px solid green;
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+@media only screen and (max-width: 1440px) {
+  .content-container {
+    border: 5px solid purple;
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .content-container {
+    border: 5px solid yellow;
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .content-container {
+    border: 5px solid red;
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .content-container {
+    border: 5px solid blue;
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+
+.content-container-nested {
+  border: 1px solid red;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15vh;
+}
+@media only screen and (max-width: 425px) {
+  .content-container-nested {
+    width: 100%;
+  }
+}
+
+.content-logo {
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+}
+.content-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.content-text {
+  border: 1px solid orange;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-text button {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.content-text button:hover {
+  cursor: pointer;
+}
+
+/* main: master.scss */
+h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 3.125rem;
+  color: #fff;
+}
+
+p, ul, li {
+  font-family: "museo-sans", sans-serif;
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*# sourceMappingURL=master.css.map */
