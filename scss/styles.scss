@@ -5,20 +5,6 @@
 }
 
 body{
-  background-image: url("../assets/img/background-image-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  background-position: center;
-  @media screen and (min-width: 769px){
-    background-image: url("../assets/img/background-image.png");
-  }
-}
-
-.background{
-  border: 1px solid red;
-  width: 100vw;
-  height: 100vh;
   // background-image: url("../assets/img/background-image-mobile.png");
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -27,6 +13,20 @@ body{
   // @media screen and (min-width: 769px){
   //   background-image: url("../assets/img/background-image.png");
   // }
+}
+
+.background{
+  // border: 1px solid red;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/img/background-image-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  @media screen and (min-width: 769px){
+    background-image: url("../assets/img/background-image-large.jpg");
+  }
 }
 
 .content-container{
@@ -86,7 +86,7 @@ width: 100%;
 }
 
 .content-text{
-  border: 1px solid orange;
+  // border: 1px solid orange;
   text-align: center;
   width: rem(450);
   height: rem(250);
