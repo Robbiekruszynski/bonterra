@@ -12,6 +12,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #000;
   // @media screen and (min-width: 377px) and (max-width: 768px){
   //   background-position: 90%;
   // }
@@ -36,7 +37,7 @@ body{
 }
 
 .content-container{
-  border: 1px solid green;
+  // border: 1px solid green;
   width: 100vw;
   height: 100%;
   display: flex;
@@ -51,7 +52,7 @@ body{
 }
 
 .content-container-nested{
-  border: 5px dotted salmon;
+  // border: 5px dotted salmon;
   width: 100%;
   height: 100%;
   display: flex;
@@ -88,7 +89,7 @@ body{
 }
 
 .content-logo{
-  border: 1px solid blue;
+  // border: 1px solid blue;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -112,7 +113,7 @@ body{
 }
 
 .content-text{
-  border: 1px solid orange;
+  // border: 1px solid orange;
   text-align: center;
   width: 100%;
   height: rem(250);
